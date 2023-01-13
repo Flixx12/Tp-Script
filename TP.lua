@@ -1,6 +1,5 @@
 -- Gui to Lua
 -- Version: 3.2
-
 -- Instances:
 if Password == 00100200300 then
 	local ScreenGui = Instance.new("ScreenGui")
@@ -83,7 +82,6 @@ if Password == 00100200300 then
 	ScreenGui.Parent = game.CoreGui
 	main.Active = true
 	main.Draggable = true
-end
 
 else
 	print("Wrong Password!")
