@@ -2,7 +2,7 @@
 -- Version: 3.2
 
 -- Instances:
-
+if Password == "00100200300"
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local name = Instance.new("TextBox")
