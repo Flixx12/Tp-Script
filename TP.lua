@@ -2,9 +2,7 @@
 -- Version: 3.2
 
 -- Instances:
-if not Password == 00100200300 then
-	print("Password is wrong!")
-else
+if Password == 00100200300 then
 	local ScreenGui = Instance.new("ScreenGui")
 	local main = Instance.new("Frame")
 	local name = Instance.new("TextBox")
@@ -85,4 +83,8 @@ else
 	ScreenGui.Parent = game.CoreGui
 	main.Active = true
 	main.Draggable = true
+end
+
+else
+	print("Wrong Password!")
 end
