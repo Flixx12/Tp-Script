@@ -2,7 +2,7 @@
 -- Version: 3.2
 
 -- Instances:
-if not Password == "00100200300" then
+if not Password == 00100200300 then
 	print("Password is wrong!")
 else
 	local ScreenGui = Instance.new("ScreenGui")
