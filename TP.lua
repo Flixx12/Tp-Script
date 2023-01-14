@@ -8,8 +8,8 @@ if Password == 00100200300 then
 	local follow = Instance.new("TextButton")
 	local tp = Instance.new("TextButton")
 	local view = Instance.new("TextButton")
-	local following = false
-	local viewing = false
+	getgenv().following = false
+	getgenv().viewing = false
 
 	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
