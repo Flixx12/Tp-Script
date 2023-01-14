@@ -74,11 +74,10 @@ if Password == 00100200300 then
 
 	function followPlayer()
 		while following do
-			local playerName = game.Players.LocalPlayer.Name
-			local player = game.Workspace:FindFirstChild(playerName)
-			local target = game.Workspace:FindFirstChild(name.Text).RightFoot.CFrame
+			local player = game.Players.LocalPlayer
+			local target = game.Workspace:FindFirstChild(name.Text).HumanoidRootPart.CFrame
 			if player.Character then
-				player.Character.RightFoot.CFrame = target
+				player.Character.HumanoidRootPart.CFrame = target
 			end
 			wait()
 		end
