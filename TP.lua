@@ -13,7 +13,7 @@ if getgenv().Loaded == true then
 end
 
 if Password == 00100200300 then
-    getgenv().Loaded = true
+    	getgenv().Loaded = true
 	Notify("Right password!")
 	local ScreenGui = Instance.new("ScreenGui")
 	local main = Instance.new("Frame")
