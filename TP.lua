@@ -63,10 +63,12 @@ if Password == 00100200300 then
 	follow.MouseButton1Click:Connect(function()
 		if following == false then
 			following = true
+			game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.Anchored = true
 			follow.Text = "Unfollow"
 			followPlayer()
 		else
 			following = false
+			game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.Anchored = false
 			follow.Text = "Follow"
 		end
 	end)
