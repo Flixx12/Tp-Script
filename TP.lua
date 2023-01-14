@@ -1,8 +1,14 @@
+local SG = game:GetService("StarterGui")
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Felix's script",
+        Text = tx,	
+Duration = 3
+    })	
+end
+
 if Password == 00100200300 then
-	local message = Instance.new("Message",workspace)
-	message.Text = "Right password!"
-	wait(2)
-	message:Destroy()
+	Notify("Right password!")
 	local ScreenGui = Instance.new("ScreenGui")
 	local main = Instance.new("Frame")
 	local name = Instance.new("TextBox")
@@ -129,8 +135,5 @@ if Password == 00100200300 then
 		end
 	end)
 else
-	local message = Instance.new("Message",workspace)
-	message.Text = "Wrong password!"
-	wait(2)
-	message:Destroy()
+	Notify("Wrong password!")
 end
