@@ -1,7 +1,3 @@
--- Gui to Lua
--- Version: 3.2
--- Instances:
-Password = 00100200300
 if Password == 00100200300 then
 	local ScreenGui = Instance.new("ScreenGui")
 	local main = Instance.new("Frame")
