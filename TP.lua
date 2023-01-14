@@ -125,5 +125,8 @@ if Password == 00100200300 then
 		end
 	end)
 else
-	print("Wrong Password!")
+	local message = Instance.new("Message",workspace)
+	message.Text = "Wrong password!"
+	wait(2)
+	message:Destroy()
 end
