@@ -122,6 +122,7 @@ if Password == 00100200300 then
 	mouse.KeyDown:connect(function(k)
     		if k == "x" then
 			ScreenGui:Destroy()
+		end
 	end)
 else
 	print("Wrong Password!")
