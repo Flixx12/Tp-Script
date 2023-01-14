@@ -7,7 +7,13 @@ Duration = 3
     })	
 end
 
+if getgenv().Loaded == true then	
+    Notify("Aimlock is already loaded!")
+    return	
+end
+
 if Password == 00100200300 then
+    getgenv().Loaded = true
 	Notify("Right password!")
 	local ScreenGui = Instance.new("ScreenGui")
 	local main = Instance.new("Frame")
@@ -131,6 +137,7 @@ if Password == 00100200300 then
 	
 	mouse.KeyDown:connect(function(k)
     		if k == "x" then
+            getgenv().Loaded = false
 			ScreenGui:Destroy()
 		end
 	end)
