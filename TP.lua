@@ -1,4 +1,8 @@
 if Password == 00100200300 then
+	local message = Instance.new("Message",workspace)
+	message.Text = "Right password!"
+	wait(2)
+	message:Destroy()
 	local ScreenGui = Instance.new("ScreenGui")
 	local main = Instance.new("Frame")
 	local name = Instance.new("TextBox")
