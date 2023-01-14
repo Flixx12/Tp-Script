@@ -1,6 +1,7 @@
 -- Gui to Lua
 -- Version: 3.2
 -- Instances:
+Password = 00100200300
 if Password == 00100200300 then
 	local ScreenGui = Instance.new("ScreenGui")
 	local main = Instance.new("Frame")
@@ -8,8 +9,10 @@ if Password == 00100200300 then
 	local follow = Instance.new("TextButton")
 	local tp = Instance.new("TextButton")
 	local view = Instance.new("TextButton")
+	local mouse = game.Players.LocalPlayer:GetMouse()
 	getgenv().following = false
 	getgenv().viewing = false
+	getgenv().guiVisible = true
 
 	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -107,6 +110,18 @@ if Password == 00100200300 then
 	ScreenGui.Parent = game.CoreGui
 	main.Active = true
 	main.Draggable = true
+	
+	mouse.KeyDown:connect(function(k)
+    		if k == "p" then
+        		if guiVisible then
+				guiVisible = false
+				main.Visible = false
+			else
+				guiVisible = true
+				main.Visible = true
+			end
+    		end
+	end)
 else
 	print("Wrong Password!")
 end
