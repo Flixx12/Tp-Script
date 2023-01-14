@@ -82,7 +82,7 @@ if Password == 00100200300 then
 		end
 	end
 
-	tp.MouseButton1Click:Connect(function()
+	tp.MouseButton1Click:Connect(function().
 		local player = game.Players.LocalPlayer
 		local target = game.Workspace:FindFirstChild(name.Text).HumanoidRootPart.CFrame
 		if player.Character then
