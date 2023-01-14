@@ -71,13 +71,13 @@ if Password == 00100200300 then
 	end)
 
 	function followPlayer()
-		game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.Anchored = true
-		follow.Text = "Unfollow"
 		while following do
 			local player = game.Players.LocalPlayer
 			local target = game.Workspace:FindFirstChild(name.Text).HumanoidRootPart.CFrame
 			if player.Character then
 				player.Character.HumanoidRootPart.CFrame = target
+				game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.Anchored = true
+				follow.Text = "Unfollow"
 			end
 			wait()
 		end
