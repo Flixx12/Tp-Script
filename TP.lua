@@ -1,14 +1,14 @@
 local SG = game:GetService("StarterGui")
 function Notify(tx)
     SG:SetCore("SendNotification", {
-        Title = "Felix's script",
+        Title = "Felix's TP script",
         Text = tx,	
 Duration = 3
     })	
 end
 
 if getgenv().Loaded == true then	
-    Notify("Aimlock is already loaded!")
+    Notify("TP script is already loaded!")
     return	
 end
 
@@ -87,9 +87,9 @@ if Password == 00100200300 then
 	end)
 
 	function followPlayer()
+		local player = game.Players.LocalPlayer
+		local target = game.Workspace:FindFirstChild(name.Text).HumanoidRootPart.CFrame
 		while following do
-			local player = game.Players.LocalPlayer
-			local target = game.Workspace:FindFirstChild(name.Text).HumanoidRootPart.CFrame
 			if player.Character then
 				player.Character.HumanoidRootPart.CFrame = target
 				game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.Anchored = true
@@ -103,6 +103,7 @@ if Password == 00100200300 then
 		local player = game.Players.LocalPlayer
 		local target = game.Workspace:FindFirstChild(name.Text).HumanoidRootPart.CFrame
 		if player.Character then
+			local target = game.Workspace:FindFirstChild(name.Text).HumanoidRootPart.CFrame
 			player.Character.HumanoidRootPart.CFrame = target
 		end
 	end)
