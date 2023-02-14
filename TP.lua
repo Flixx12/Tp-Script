@@ -88,8 +88,8 @@ if Password == 00100200300 then
 
 	function followPlayer()
 		while following do
+			local player = game.Players.LocalPlayer
 			if player.Character then
-				local player = game.Players.LocalPlayer
 				local target = game.Workspace:FindFirstChild(name.Text).HumanoidRootPart.CFrame
 				player.Character.HumanoidRootPart.CFrame = target
 				game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name).HumanoidRootPart.Anchored = true
